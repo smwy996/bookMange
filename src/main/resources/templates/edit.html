@@ -3,13 +3,13 @@
 <head>
     <title>Edit Book</title>
     <meta charset="UTF-8">
-    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-5">
     <h1>Edit Book</h1>
-    <form th:action="@{/books/update}" method="post">
+    <!-- 添加 th:object="${book}" -->
+    <form th:object="${book}" th:action="@{/books/update}" method="post">
         <input type="hidden" th:field="*{id}">
         <div class="form-group">
             <label for="title">Title:</label>

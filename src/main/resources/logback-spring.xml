@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 定义日志格式 -->
+    <property name="LOG_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n"/>
+
+    <!-- 控制台输出配置 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 根日志级别设为 DEBUG，显示 DEBUG 及以上（DEBUG/INFO/WARN/ERROR） -->
+    <root level="WARN">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <!-- 调整 Spring 框架的日志级别（避免过多 DEBUG 日志） -->
+    <!--<logger name="org.springframework" level="WARN"/>
+    <logger name="org.hibernate" level="INFO"/>-->
+</configuration>

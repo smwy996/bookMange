@@ -13,3 +13,8 @@ mybatis.configuration.map-underscore-to-camel-case=true
 spring.thymeleaf.cache=false
 spring.thymeleaf.prefix=classpath:/templates/
 spring.thymeleaf.suffix=.html
+### log
+logging.level.org.springframework.web=DEBUG
+logging.level.com.demo.bookMange=DEBUG
+#banner pyhcrs
+spring.main.banner-mode=console

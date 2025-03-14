@@ -1,8 +1,5 @@
 package com.demo.bookMange.controller;
 
-
-
-
 import com.demo.bookMange.entity.Book;
 import com.demo.bookMange.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +15,8 @@ public class BookController {
 
     @Autowired
     private BookService bookService;
-    // 显示所有书籍（支持 / 和 /books/）
-    @GetMapping({"/", })
+    // 显示所有书籍（支持 /books 和 /books/）
+    @GetMapping({"/", ""}) // 修正路径
     public String listBooks(Model model) {
         List<Book> books = bookService.getAllBooks();
         System.out.println("Books from service: " + books); // 打印日志

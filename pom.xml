@@ -81,7 +81,10 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.demo.bookMange.BookMangeApplication</mainClass>
-                    <skip>true</skip>
+                    <!--作用 ：控制是否跳过插件的执行。
+                         <skip>true</skip>，这会 禁用插件的所有功能 ，导致生成的 JAR 包不可执行
+                        删除 <skip>true</skip> 或将其改为 <skip>false</skip>，确保插件正常执行。-->
+                    <!--<skip>true</skip>-->
                 </configuration>
                 <executions>
                     <execution>
